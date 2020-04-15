@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;​
 import com.users.ribbon.models.Order;​
 ​
 ​
-@FeignClient(name="orders-service")​
+//@FeignClient(name="orders-service")​
+@FeignClient(name="api-gateway-service")​
 @RibbonClient(name="orders-service")​
 public interface OrderClient {​
 ​
-@GetMapping("/demo/orders")​
+//@GetMapping("/demo/orders")​
+@GetMapping("/orders-service/demo/orders")​
 public List<Order> getAll();​
 ​
 /*@GetMapping("/{userId}")​
